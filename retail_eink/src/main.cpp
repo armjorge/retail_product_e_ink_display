@@ -1,18 +1,24 @@
+
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
-
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  // 1. Tell the Nano that the LED pin is an OUTPUT (it sends electricity out)
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // 2. Turn the LED ON (HIGH voltage)
+  digitalWrite(LED_BUILTIN, HIGH);
+  
+  // 3. Wait for 1 second (1000 milliseconds)
+  delay(1000);
+  
+  // 4. Turn the LED OFF (LOW voltage)
+  digitalWrite(LED_BUILTIN, LOW);
+  
+  // 5. Wait for 1 second
+  delay(1000);
+  
+  // The loop then starts over from step 2!
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
